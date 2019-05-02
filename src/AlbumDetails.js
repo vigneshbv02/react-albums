@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import FecthData from '../services/FetchData'
+import axios from 'axios';
+import PropTypes from 'prop-types';
 
 export default class AlbumDetails extends Component {
+  static propTypes = {
+    album = PropTypes.object.isRequired
+  } 
+
   constructor(props) {
     super(props);
-
-    this.state = {};
-
-    fetch("https://rallycoding.herokuapp.com/api/music_albums").then(
-      response => {
-        console.log(resposne.data);
-        this.setState({
-          albums : response.data
-        });
-      });
   }
 
   render() {
+    const album = this.props.album;
+    console.log(album);
     return(
-      <div className={'container-fluid'}>
-        {this.state.albums}
+      <div>
       </div>
     );
   }

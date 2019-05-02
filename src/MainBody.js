@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import AlbumDetails from './AlbumDetails';
+import AlbumList from './AlbumList';
 
 export default class MainBody extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export default class MainBody extends Component {
   render() {
     return(
       <div className={'container-fluid'}>
-        <AlbumDetails />
+        <AlbumList />
       </div>
     );
   }
