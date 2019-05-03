@@ -26,7 +26,7 @@ export default class AlbumList extends Component {
       <div>
       {albums.map(album => {
         return (
-          <AlbumDetails album={this.album} />
+          <p>{album.title}</p>
         );
       })}
       </div>
